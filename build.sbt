@@ -2,10 +2,7 @@ name:="root"
 
 Global / bloopAggregateSourceDependencies := true
 
-lazy val root = Project(id="root", base=file(".")).aggregate(foo,bar).dependsOn(foo,bar)
-
-lazy val foo = RootProject(file("foo"))
-lazy val bar = RootProject(file("bar"))
+lazy val root = Project(id="root", base=file("."))
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.5"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
